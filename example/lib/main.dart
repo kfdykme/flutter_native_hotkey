@@ -22,6 +22,10 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     NativeHotkey.instance.init();
+
+    NativeHotkey.instance.setHotkeyListener('ctrl-a', () {
+      print("ctrl-a");
+    });
     initPlatformState();
   }
 

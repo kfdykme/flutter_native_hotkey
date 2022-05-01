@@ -11,13 +11,11 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+提供给Flutter Desktop的键盘热键库，
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
+- Windows Hotkey
 ## Getting started
 
 TODO: List prerequisites and provide or point to information on how to
@@ -29,7 +27,13 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
 
 ```dart
-const like = 'sample';
+import 'package:native_hotkey/native_hotkey.dart';
+
+NativeHotkey.instance.init();
+
+NativeHotkey.instance.setHotkeyListener('ctrl-a', () {
+    print("ctrl-a");
+});
 ```
 
 ## Additional information
