@@ -1,0 +1,3 @@
+[submodule "keydown_library_rust"]
+	path = keydown_library_rust
+	url = git@github.com:kfdykme/keydown_library_rust.git
