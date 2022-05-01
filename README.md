@@ -29,11 +29,23 @@ to `/example` folder.
 ```dart
 import 'package:native_hotkey/native_hotkey.dart';
 
+// init and setlistener must after window show
 NativeHotkey.instance.init();
-
 NativeHotkey.instance.setHotkeyListener('ctrl-a', () {
     print("ctrl-a");
 });
+```
+
+If you want stop hotkey when window inactive;
+``` c++
+// win32_window.cpp
+
+    case WM_ACTIVATE:
+      NativeHotKeyOnWindowActiveEvent((int64_t)wparam);
+      if (child_content_ != nullptr) {
+        SetFocus(child_content_);
+      }
+      return 0;
 ```
 
 ## Additional information
