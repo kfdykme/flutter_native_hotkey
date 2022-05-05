@@ -44,10 +44,7 @@ class NativeHotkey {
       return result;
     });
 
-    // int? res = await mMethodChannel.invokeMethod<int>('registerKeydownEvent', <String, Object>{'hotkey': 'ctrl-s', 'callbackId': 1});
-    setHotkeyListener('ctrl-s', (){
-      print("callback kfdykme");
-    });
+    // int? res = await mMethodChannel.invokeMethod<int>('registerKeydownEvent', <String, Object>{'hotkey': 'ctrl-s', 'callbackId': 1}); 
   }
 
   Future<int?> setHotkeyListener(String hotkey, Function func) {
